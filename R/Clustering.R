@@ -1,6 +1,6 @@
 ##### Auxiliar functions for clustering in the Latent Deformation Model
-source("sim_fun_univ.R")   # for simulation
-source("sq_dist.R") # for depth-based estimation main function and distance computation
+source("R/sim_fun_univ.R")   # for simulation
+source("R/sq_dist.R") # for depth-based estimation main function and distance computation
 library(cluster)
 library(mclust)     # for computing the Adjusted Rand Index (ARI)
 library(fdasrvf)    # for K-means Align Tucker clustering 

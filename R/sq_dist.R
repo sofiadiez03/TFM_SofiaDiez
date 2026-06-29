@@ -1,5 +1,5 @@
 ##### Distance Squared Matrix computation
-source("est_regist_curves.R")   # estimation of the registered curves
+source("R/est_regist_curves.R")   # estimation of the registered curves
 library(pracma)
 
 ## Distance defined for functional data in the latent deformation model
