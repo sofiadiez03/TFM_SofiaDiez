@@ -76,7 +76,7 @@ X.hfd <- X %>% mutate(geo = codes.iso2(Code)) %>% mutate(country = countrycode(g
 
 
 ################################ DATOS HFC #####################################
-X.hfc = read.table(file="HFC_ASFRstand_BO.txt", header = T, sep=",")
+X.hfc = read.table(file="HFC_ASFRstand_BO_clean.txt", header = T, sep=",")
 
 # restringimos a los países válidos y cambiamos GBR_NP (UK-> GBR) y DEUTNP (Germany -> DEU) a los códigos oficiales y al rango de edad de Eurostat
 geo.valid <- setdiff(gsub(" ","",unique(X.hfc$Country)) , c("GBRTENW","GBR_NIR" ,"GBR_SCO","DEUTE"  ,"DEUTW" ))  #UK Wales, North Ir, Scotland, Germany East & West
