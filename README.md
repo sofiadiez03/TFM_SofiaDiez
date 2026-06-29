@@ -24,25 +24,25 @@ To ensure absolute reproducibility of all simulations, figures, and case studies
 The project is structured following the standard guidelines for reproducible research in data science:
 
 ```text
-├── tfm-distancias-fda.Rproj  # RStudio Project file (maintains relative paths)
+├── TFM_SofiaDiez.Rproj       # RStudio Project file (maintains relative paths)
 ├── README.md                 # This documentation file
 ├── .gitignore                # Filters out temporary R files
 │
 ├── R/                        # Core mathematical functions and helper metrics
-│   ├── sq_dist.R             # Implementation of the proposed distance metrics
-│   ├── sim_fun_univ.R        # Helper functions for simulating functional data
-│   ├── Clustering.R          # Clustering utility functions
-│   └── este_regist_curves.R  # Curve registration and alignment utilities
+│   ├── sq_dist.R                   # Implementation of the proposed distance metrics
+│   ├── sim_fun_univ.R              # Helper functions for simulating functional data
+│   ├── Clustering.R                # Clustering utility functions
+│   └── este_regist_curves.R        # Curve registration and alignment utilities
 │
 ├── data/                     # Data resources used in the case studies
 │   ├── asfrTRbo_read.txt            # Raw demographic data from HFD
 │   └── HFC_ASFRstand_BO_clean.txt   # Cleaned demographic data from HFC
 │
 └── scripts/                  # Executable workflows ordered by thesis chapters
-    ├── Simulation_Study_1.R  # Section 4.1: Own simulated models (L1, L2, L3, L4)
-    ├── Simulation_Study_2.R  # Section 4.2: Replication of Qiao's simulation design
-    ├── MDS.R                 # Multidimensional Scaling analysis & visualizations
-    ├── KNN_Two_Groups.R      # K-Nearest Neighbors evaluation for 2 classes
-    ├── KNN_Three_Groups.R    # K-Nearest Neighbors evaluation for 3 classes
-    ├── CS_Tecator.R          # Section 5.3: Case Study - Tecator meat spectroscopy dataset
-    └── CS_Fertility_2020.R   # Section 5.4: Case Study - Eurostat + HFD + HFC fertility application
+    ├── MDS.R                       # Multidimensional Scaling analysis & visualizations
+    ├── KNN_Two_Groups.R            # K-Nearest Neighbors evaluation for 2 classes
+    ├── KNN_Three_Groups.R          # K-Nearest Neighbors evaluation for 3 classes
+    ├── Simulation_Study_1.R        # Section 5.1: Own simulated models (L1, L2, L3, L4)
+    ├── Simulation_Study_2.R        # Section 5.2: Replication of Qiao's simulation design
+    ├── CS_Tecator.R                # Section 5.3: Case Study - Tecator meat spectroscopy dataset
+    └── CS_Fertility_2020.R         # Section 5.4: Case Study - Eurostat + HFD + HFC fertility application
