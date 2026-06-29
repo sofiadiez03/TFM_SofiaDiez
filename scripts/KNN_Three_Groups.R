@@ -584,8 +584,6 @@ omega_alpha_values <- list(
 
 omega_values <- c(0.1, 0.5, 0.9)
 
-# To save the KNN images:
-setwd(paste0("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/KNN/",directory))
 for (omega_val in omega_values) {
   
   df_plot <- KNN_results_long %>% 
@@ -657,8 +655,6 @@ for (omega_val in omega_values) {
       legend.spacing.x = unit(0.5, "cm")
     )
   
-  # Guardar imagen
-  png(name, width = 4000, height = 1600, res = 300)
   print(p)
   dev.off()
 }
