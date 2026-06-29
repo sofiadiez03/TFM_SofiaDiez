@@ -1,8 +1,8 @@
 # A Phase and Amplitude-Based Distance for Functional Data
 
-This repository contains the complete, reproducible computational workflow developed for my Master's Thesis (TFM) in Big Data Analytics (2025-2026) at Universidad Carlos III de Madrid. 
+This repository contains the complete, reproducible computational workflow developed for my Master's Thesis in Big Data Analytics (2025-2026) at Universidad Carlos III de Madrid. 
 
-The project introduces novel distance metrics in Functional Data Analysis (FDA) designed to explicitly separate phase variability (shifts in the X-axis) and amplitude variability (differences in the Y-axis), overcoming the limitations of standard metrics like the $L^2$ distance.
+The project introduces novel distance metrics in Functional Data Analysis (FDA) designed to explicitly separate phase variability and amplitude variability, overcoming the limitations of standard metrics like the $\mathcal{L}^2$ distance.
 
 ---
 
