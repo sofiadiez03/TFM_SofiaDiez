@@ -1,10 +1,5 @@
 rm(list = ls())
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/Base_Codes")
-source("Clustering.R")   
-
-# Save tables as .png
-library(gt)
-library(webshot2)
+source("R/Clustering.R")   
 
 library(ggplot2)
 library(tidyr)
