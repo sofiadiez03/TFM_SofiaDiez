@@ -4,10 +4,9 @@ library(dplyr)
 library(ggplot2)
 library(restatapi) #cargar datos de eurostat
 
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/Base_Codes")
-source("sim_fun_univ.R")   # for simulation
-source("sq_dist.R")
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_Eurostat")
+
+source("R/sim_fun_univ.R")   # for simulation
+source("R/sq_dist.R")
 
 ############################## DATOS EUROSTAT ##################################
 rd<-get_eurostat_raw("demo_fordagec",verbose=T)
