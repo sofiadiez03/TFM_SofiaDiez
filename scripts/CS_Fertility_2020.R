@@ -39,7 +39,7 @@ age.range <- range(X.eust$age)
 
 
 ################################ DATOS HFD #####################################
-X_all = read.table(file="asfrTRbo_read.txt", header = T)
+X_all = read.table(file="data/asfrTRbo_read.txt", header = T)
 
 #cohort representa el año de nacimiento de la madre para una edad dada (ej. 23) en un año dado (ej. 1984). En 1984 puede haber madres de 
 # 23 nacidas en 1961 o en 1960 (que todavía no hayan cumplido años en el momento de dar a luz)
@@ -75,7 +75,7 @@ X.hfd <- X %>% mutate(geo = codes.iso2(Code)) %>% mutate(country = countrycode(g
 
 
 ################################ DATOS HFC #####################################
-X.hfc = read.table(file="HFC_ASFRstand_BO_clean.txt", header = T, sep=",")
+X.hfc = read.table(file="data/HFC_ASFRstand_BO_clean.txt", header = T, sep=",")
 
 # restringimos a los países válidos y cambiamos GBR_NP (UK-> GBR) y DEUTNP (Germany -> DEU) a los códigos oficiales y al rango de edad de Eurostat
 geo.valid <- setdiff(gsub(" ","",unique(X.hfc$Country)) , c("GBRTENW","GBR_NIR" ,"GBR_SCO","DEUTE"  ,"DEUTW" ))  #UK Wales, North Ir, Scotland, Germany East & West
