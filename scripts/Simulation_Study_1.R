@@ -1,10 +1,5 @@
 rm(list = ls())
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/Base_Codes")
-source("Clustering.R") 
-
-# Save tables as .png
-library(gt)
-library(webshot2)
+source("R/Clustering.R") 
 
 library(ggplot2)
 library(tidyr)
@@ -227,19 +222,10 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2")
-
-write.csv(ARI_results, file = "SS1_L1_L2_25_75.csv", row.names = FALSE)
-
-
-
-
 ### Pareto chart ----
 library(ggplot2)
 library(latex2exp)
 
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -304,14 +290,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
 
 
 
@@ -515,19 +493,9 @@ ARI_results[8,2] <- sprintf("%.4f (%.4f)", mean(ari_PAM_Mej), sd(ari_PAM_Mej))
 ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))  
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2")
-
-write.csv(ARI_results, file = "SS1_L1_L2_50_50.csv", row.names = FALSE)
-
-
 
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -592,14 +560,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
 
 
 
@@ -805,19 +765,8 @@ ARI_results[8,2] <- sprintf("%.4f (%.4f)", mean(ari_PAM_Mej), sd(ari_PAM_Mej))
 ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))  
 
 
-### Final Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2")
-
-write.csv(ARI_results, file = "SS1_L1_L2_75_25.csv", row.names = FALSE)
-source("LateX_Table_Two_Groups.R")  
-
-
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -882,16 +831,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
-
 
 
 
@@ -1116,19 +1055,8 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L2_L3")
-
-write.csv(ARI_results, file = "SS1_L2_L3_25_75.csv", row.names = FALSE)
-
-
-
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -1193,15 +1121,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
 
 
 
@@ -1404,19 +1323,9 @@ ARI_results[8,2] <- sprintf("%.4f (%.4f)", mean(ari_PAM_Mej), sd(ari_PAM_Mej))
 ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))  
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L2_L3")
-
-write.csv(ARI_results, file = "SS1_L2_L3_50_50.csv", row.names = FALSE)
-
-
 
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -1694,19 +1603,9 @@ ARI_results[8,2] <- sprintf("%.4f (%.4f)", mean(ari_PAM_Mej), sd(ari_PAM_Mej))
 ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))  
 
 
-### Final Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L2_L3")
-
-write.csv(ARI_results, file = "SS1_L2_L3_75_25.csv", row.names = FALSE)
-source("LateX_Table_Two_Groups.R")  
-
 
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -1771,14 +1670,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
 
 
 
@@ -2014,19 +1905,8 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2_L4")
-
-write.csv(ARI_results, file = "SS1_L1_L2_L4_33_33_33.csv", row.names = FALSE)
-
-
-
 
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -2091,15 +1971,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
 
 
 
@@ -2309,19 +2180,7 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2_L4")
-
-write.csv(ARI_results, file = "SS1_L1_L2_L4_60_20_20.csv", row.names = FALSE)
-
-
-
-
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -2386,15 +2245,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
 
 
 
@@ -2606,19 +2456,7 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-### Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2_L4")
-
-write.csv(ARI_results, file = "SS1_L1_L2_L4_20_60_20.csv", row.names = FALSE)
-
-
-
-
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -2683,15 +2521,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
 
 
 
@@ -2898,21 +2727,7 @@ ARI_results[8,3] <- sprintf("%.4f (%.4f)", mean(PAM_Mej_time), sd(PAM_Mej_time))
 
 
 
-
-### Final Table ----
-setwd("C:/Users/sofia/OneDrive - Universidad Carlos III de Madrid (1)/Proyecto/TFM/Codigos/SS_1/L1_L2_L4")
-
-write.csv(ARI_results, file = "SS1_L1_L2_L4_20_20_60.csv", row.names = FALSE)
-source("LateX_Table_Three_Groups.R")
-
-
-
-
 ### Pareto chart ----
-library(ggplot2)
-library(latex2exp)
-
-# Tu dataframe se mantiene igual
 plot_data <- data.frame(
   Method = c(
     "Tucker",
@@ -2977,15 +2792,6 @@ ggplot(plot_data, aes(x = Execution_Time, y = ARI)) +
       override.aes = list(size = 3) 
     )
   )
-ggsave(
-  filename = paste0("Pareto_Chart_", proportion, ".png"), 
-  device = "png",                    
-  width = 10,                        
-  height = 5,                        
-  units = "in",                      
-  dpi = 300                          
-)
-
 
 
                                                                                                                                                                                                                 
