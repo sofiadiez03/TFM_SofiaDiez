@@ -13,7 +13,7 @@ To ensure absolute reproducibility of all simulations, figures, and case studies
 1. **Clone or Download the Repository:**
    Download the project as a ZIP file or clone it via Git.
 2. **Open the Project:**
-   Launch RStudio by double-clicking the `TFM_SofiaDiez.Rproj` file in the root directory. This automatically sets the correct relative working paths, so you **do not** need to use `setwd()`.
+   Launch RStudio by double-clicking the `TFM_SofiaDiez.Rproj` file in the root directory. This automatically sets the correct relative working paths, so you do not need to use `setwd()`.
 3. **Run the Scripts:**
    Navigate to the `scripts/` folder and execute the desired files.
 
